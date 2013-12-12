@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{506CF600-20B1-4FE4-8A58-5C02561A6CAB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core_MovieShelf.Test</RootNamespace>
+    <AssemblyName>Core_MovieShelf.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\Library\Log4Net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="nunit.framework, Version=2.5.7.10213, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\Library\RhinoMocks\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\Library\StructureMap\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.AutoMocking">
+      <HintPath>..\Library\StructureMap\StructureMap.AutoMocking.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMockerBase.cs" />
+    <Compile Include="ContractTests\BaseDomainTest.cs" />
+    <Compile Include="ContractTests\BaseEntityTest.cs" />
+    <Compile Include="ContractTests\BaseLookupTest.cs" />
+    <Compile Include="ContractTests\BorrowedItemTest.cs" />
+    <Compile Include="ContractTests\BorrowerTest.cs" />
+    <Compile Include="ContractTests\DisplayImageTest.cs" />
+    <Compile Include="ContractTests\DomainMessageTest.cs" />
+    <Compile Include="ContractTests\DomainStatusTest.cs" />
+    <Compile Include="ContractTests\GenreTypeTest.cs" />
+    <Compile Include="ContractTests\MovieDetailTest.cs" />
+    <Compile Include="ContractTests\MovieSeriesTest.cs" />
+    <Compile Include="ContractTests\MovieTypeTest.cs" />
+    <Compile Include="ContractTests\RatingTypeTest.cs" />
+    <Compile Include="ContractTests\StatusTypeTest.cs" />
+    <Compile Include="ContractTests\ViewRatingTypeTest.cs" />
+    <Compile Include="DataTests\DatabaseConnectionProvider.cs" />
+    <Compile Include="DataTests\DatabaseConnectionProviderTest.cs" />
+    <Compile Include="DataTests\ReflectionTestHelperTest.cs" />
+    <Compile Include="DataTests\SqlResourceLoaderTest.cs" />
+    <Compile Include="DomainTests\BaseDomainTest.cs" />
+    <Compile Include="DomainTests\BaseEntityTest.cs" />
+    <Compile Include="DomainTests\BaseLookupTest.cs" />
+    <Compile Include="DomainTests\BorrowedItemTest.cs" />
+    <Compile Include="DomainTests\BorrowerTest.cs" />
+    <Compile Include="DomainTests\DomainLoggerTest.cs" />
+    <Compile Include="DomainTests\MessageHelperTest.cs" />
+    <Compile Include="DomainTests\DomainStatusTest.cs" />
+    <Compile Include="DomainTests\DomainMessageTest.cs" />
+    <Compile Include="DomainTests\DisplayImageTest.cs" />
+    <Compile Include="DomainTests\MovieSeriesTest.cs" />
+    <Compile Include="DomainTests\StatusTypeTest.cs" />
+    <Compile Include="DomainTests\MovieTypeTest.cs" />
+    <Compile Include="DomainTests\RatingTypeTest.cs" />
+    <Compile Include="DomainTests\ViewRatingTypeTest.cs" />
+    <Compile Include="DomainTests\GenreTypeTest.cs" />
+    <Compile Include="DomainTests\MovieDetailTest.cs" />
+    <Compile Include="ModelTests\BorrowedItremDalTest.cs" />
+    <Compile Include="ModelTests\ViewRatingTypeDalTest.cs" />
+    <Compile Include="ModelTests\StatusTypeDalTest.cs" />
+    <Compile Include="ModelTests\MovieSeriesDalTest.cs" />
+    <Compile Include="ModelTests\RatingTypeDalTest.cs" />
+    <Compile Include="ModelTests\MovieTypeDalTest.cs" />
+    <Compile Include="ModelTests\MovieDetailDalTest.cs" />
+    <Compile Include="ModelTests\DisplayImageDalTest.cs" />
+    <Compile Include="ModelTests\GenreTypeDalTest.cs" />
+    <Compile Include="ModelTests\BorrowerDalTest.cs" />
+    <Compile Include="ProcessTests\BorrowedItemProcessTest.cs" />
+    <Compile Include="ProcessTests\BorrowerProcessTest.cs" />
+    <Compile Include="ProcessTests\DisplayImagelProcessTest.cs" />
+    <Compile Include="ProcessTests\GenreTypeProcessTest.cs" />
+    <Compile Include="ProcessTests\MovieDetailProcessTest.cs" />
+    <Compile Include="ProcessTests\MovieSeriesProcessTest.cs" />
+    <Compile Include="ProcessTests\MovieTypeProcessTest.cs" />
+    <Compile Include="ProcessTests\RatingTypeProcessTest.cs" />
+    <Compile Include="ProcessTests\ViewRatingTypeProcessTest.cs" />
+    <Compile Include="ProcessTests\StatusTypeProcessTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectionTestHelper.cs" />
+    <Compile Include="DataTests\SqlResourceLoader.cs" />
+    <Compile Include="TestBase.cs" />
+    <Compile Include="UnitTestValues.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ServiceTests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core_MovieShelf.Data\Core_MovieShelf.Data.csproj">
+      <Project>{3E4CDEDA-1202-4C4C-9686-E52495E0681C}</Project>
+      <Name>Core_MovieShelf.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Domain\Core_MovieShelf.Domain.csproj">
+      <Project>{440F93F6-8CC8-4A37-AF2E-56B55F86689C}</Project>
+      <Name>Core_MovieShelf.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Interface.Data\Core_MovieShelf.Interface.Data.csproj">
+      <Project>{055F45FC-D74B-4563-A732-1B315CA5725A}</Project>
+      <Name>Core_MovieShelf.Interface.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Interface.Domain\Core_MovieShelf.Interface.Domain.csproj">
+      <Project>{5E4A3BF3-6B46-4EAB-9000-D144FEFED924}</Project>
+      <Name>Core_MovieShelf.Interface.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Interface.Process\Core_MovieShelf.Interface.Process.csproj">
+      <Project>{0BB6D375-45A6-44A4-B195-E8CBD6FA10B7}</Project>
+      <Name>Core_MovieShelf.Interface.Process</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Interface\Core_MovieShelf.Interface.Service.csproj">
+      <Project>{CD536E85-F49C-4C58-923F-004709E6C69E}</Project>
+      <Name>Core_MovieShelf.Interface.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Process\Core_MovieShelf.Process.csproj">
+      <Project>{16EACC3F-D5D6-4364-B376-79122BB4C348}</Project>
+      <Name>Core_MovieShelf.Process</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf\Core_MovieShelf.Service.csproj">
+      <Project>{4E783616-C937-4C1A-8482-A8C1CF34C91C}</Project>
+      <Name>Core_MovieShelf.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataTests\TestData\CreateReferenceData.sql" />
+    <EmbeddedResource Include="DataTests\TestData\CreateTestData.sql" />
+    <EmbeddedResource Include="DataTests\TestData\DeleteReferenceData.sql" />
+    <EmbeddedResource Include="DataTests\TestData\DeleteTestData.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

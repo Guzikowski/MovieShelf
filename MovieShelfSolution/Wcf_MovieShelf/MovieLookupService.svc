@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Wcf_MovieShelf.MovieLookupService" CodeBehind="MovieLookupService.svc.cs" %>

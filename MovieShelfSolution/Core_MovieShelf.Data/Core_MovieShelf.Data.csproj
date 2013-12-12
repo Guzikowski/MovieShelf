@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3E4CDEDA-1202-4C4C-9686-E52495E0681C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core_MovieShelf.Data</RootNamespace>
+    <AssemblyName>Core_MovieShelf.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDal.cs" />
+    <Compile Include="BaseEntityDal.cs" />
+    <Compile Include="BaseLookupDal.cs" />
+    <Compile Include="BorrowedItemDal.cs" />
+    <Compile Include="BorrowerDal.cs" />
+    <Compile Include="DisplayImageDal.cs" />
+    <Compile Include="GenreTypeDal.cs" />
+    <Compile Include="MovieDetailDal.cs" />
+    <Compile Include="MovieSeriesDal.cs" />
+    <Compile Include="MovieTypeDal.cs" />
+    <Compile Include="RatingTypeDal.cs" />
+    <Compile Include="StatusTypeDal.cs" />
+    <Compile Include="ViewRatingTypeDal.cs" />
+    <Compile Include="MovieModel.Designer.cs">
+      <DependentUpon>MovieModel.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="MovieModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MovieModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core_MovieShelf.Domain\Core_MovieShelf.Domain.csproj">
+      <Project>{440F93F6-8CC8-4A37-AF2E-56B55F86689C}</Project>
+      <Name>Core_MovieShelf.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Interface.Data\Core_MovieShelf.Interface.Data.csproj">
+      <Project>{055F45FC-D74B-4563-A732-1B315CA5725A}</Project>
+      <Name>Core_MovieShelf.Interface.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Interface.Domain\Core_MovieShelf.Interface.Domain.csproj">
+      <Project>{5E4A3BF3-6B46-4EAB-9000-D144FEFED924}</Project>
+      <Name>Core_MovieShelf.Interface.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.Config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

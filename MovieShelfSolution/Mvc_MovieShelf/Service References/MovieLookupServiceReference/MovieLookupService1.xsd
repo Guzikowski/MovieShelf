@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49205/MovieLookupService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain" />
+  <xs:complexType name="DomainListContractOfRatingTypeContractZchJDT3W">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="DomainListContractOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RatingTypeContract" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DomainStatus" nillable="true" type="tns:DomainStatusContract" />
+      <xs:element minOccurs="0" name="EntityList" nillable="true" type="tns:ArrayOfRatingTypeContract" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainListContractOfRatingTypeContractZchJDT3W" nillable="true" type="tns:DomainListContractOfRatingTypeContractZchJDT3W" />
+  <xs:complexType name="DomainStatusContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Messages" nillable="true" type="tns:ArrayOfDomainMessageContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainStatusContract" nillable="true" type="tns:DomainStatusContract" />
+  <xs:complexType name="ArrayOfDomainMessageContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DomainMessageContract" nillable="true" type="tns:DomainMessageContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDomainMessageContract" nillable="true" type="tns:ArrayOfDomainMessageContract" />
+  <xs:complexType name="DomainMessageContract">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain" minOccurs="0" name="Id" type="q1:EMessageNumber" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain" minOccurs="0" name="Type" type="q2:EMessageType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainMessageContract" nillable="true" type="tns:DomainMessageContract" />
+  <xs:complexType name="ArrayOfRatingTypeContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RatingTypeContract" nillable="true" type="tns:RatingTypeContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRatingTypeContract" nillable="true" type="tns:ArrayOfRatingTypeContract" />
+  <xs:complexType name="RatingTypeContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseLookupContract">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RatingTypeContract" nillable="true" type="tns:RatingTypeContract" />
+  <xs:complexType name="BaseLookupContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDomainContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DisplayImage" nillable="true" type="tns:DisplayImageContract" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BaseLookupContract" nillable="true" type="tns:BaseLookupContract" />
+  <xs:complexType name="BaseDomainContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DomainStatus" nillable="true" type="tns:DomainStatusContract" />
+      <xs:element minOccurs="0" name="HasChanged" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsNew" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRemoved" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Timestamp" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseDomainContract" nillable="true" type="tns:BaseDomainContract" />
+  <xs:complexType name="DisplayImageContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDomainContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Path" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DisplayImageContract" nillable="true" type="tns:DisplayImageContract" />
+  <xs:complexType name="DomainListContractOfStatusTypeContractZchJDT3W">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="DomainListContractOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="StatusTypeContract" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DomainStatus" nillable="true" type="tns:DomainStatusContract" />
+      <xs:element minOccurs="0" name="EntityList" nillable="true" type="tns:ArrayOfStatusTypeContract" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainListContractOfStatusTypeContractZchJDT3W" nillable="true" type="tns:DomainListContractOfStatusTypeContractZchJDT3W" />
+  <xs:complexType name="ArrayOfStatusTypeContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatusTypeContract" nillable="true" type="tns:StatusTypeContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatusTypeContract" nillable="true" type="tns:ArrayOfStatusTypeContract" />
+  <xs:complexType name="StatusTypeContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseLookupContract">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StatusTypeContract" nillable="true" type="tns:StatusTypeContract" />
+  <xs:complexType name="DomainListContractOfViewRatingTypeContractZchJDT3W">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="DomainListContractOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ViewRatingTypeContract" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DomainStatus" nillable="true" type="tns:DomainStatusContract" />
+      <xs:element minOccurs="0" name="EntityList" nillable="true" type="tns:ArrayOfViewRatingTypeContract" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainListContractOfViewRatingTypeContractZchJDT3W" nillable="true" type="tns:DomainListContractOfViewRatingTypeContractZchJDT3W" />
+  <xs:complexType name="ArrayOfViewRatingTypeContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewRatingTypeContract" nillable="true" type="tns:ViewRatingTypeContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewRatingTypeContract" nillable="true" type="tns:ArrayOfViewRatingTypeContract" />
+  <xs:complexType name="ViewRatingTypeContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseLookupContract">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ViewRatingTypeContract" nillable="true" type="tns:ViewRatingTypeContract" />
+  <xs:complexType name="GenreTypeContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseLookupContract">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GenreTypeContract" nillable="true" type="tns:GenreTypeContract" />
+  <xs:complexType name="MovieTypeContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseLookupContract">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MovieTypeContract" nillable="true" type="tns:MovieTypeContract" />
+  <xs:complexType name="DomainListContractOfDisplayImageContractZchJDT3W">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="DomainListContractOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DisplayImageContract" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DomainStatus" nillable="true" type="tns:DomainStatusContract" />
+      <xs:element minOccurs="0" name="EntityList" nillable="true" type="tns:ArrayOfDisplayImageContract" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainListContractOfDisplayImageContractZchJDT3W" nillable="true" type="tns:DomainListContractOfDisplayImageContractZchJDT3W" />
+  <xs:complexType name="ArrayOfDisplayImageContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DisplayImageContract" nillable="true" type="tns:DisplayImageContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDisplayImageContract" nillable="true" type="tns:ArrayOfDisplayImageContract" />
+  <xs:complexType name="DomainListContractOfGenreTypeContractZchJDT3W">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="DomainListContractOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="GenreTypeContract" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DomainStatus" nillable="true" type="tns:DomainStatusContract" />
+      <xs:element minOccurs="0" name="EntityList" nillable="true" type="tns:ArrayOfGenreTypeContract" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainListContractOfGenreTypeContractZchJDT3W" nillable="true" type="tns:DomainListContractOfGenreTypeContractZchJDT3W" />
+  <xs:complexType name="ArrayOfGenreTypeContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GenreTypeContract" nillable="true" type="tns:GenreTypeContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGenreTypeContract" nillable="true" type="tns:ArrayOfGenreTypeContract" />
+  <xs:complexType name="DomainListContractOfMovieTypeContractZchJDT3W">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="DomainListContractOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MovieTypeContract" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DomainStatus" nillable="true" type="tns:DomainStatusContract" />
+      <xs:element minOccurs="0" name="EntityList" nillable="true" type="tns:ArrayOfMovieTypeContract" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainListContractOfMovieTypeContractZchJDT3W" nillable="true" type="tns:DomainListContractOfMovieTypeContractZchJDT3W" />
+  <xs:complexType name="ArrayOfMovieTypeContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MovieTypeContract" nillable="true" type="tns:MovieTypeContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMovieTypeContract" nillable="true" type="tns:ArrayOfMovieTypeContract" />
+</xs:schema>

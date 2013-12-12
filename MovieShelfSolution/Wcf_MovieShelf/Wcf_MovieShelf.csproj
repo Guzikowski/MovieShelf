@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{97C55ED3-FC4C-489C-A807-80D360986A43}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wcf_MovieShelf</RootNamespace>
+    <AssemblyName>Wcf_MovieShelf</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\Library\Log4Net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MovieBorrowService.svc" />
+    <Content Include="MovieLookupService.svc" />
+    <Content Include="MovieService.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseService.cs" />
+    <Compile Include="IMovieBorrowService.cs" />
+    <Compile Include="IMovieLookupService.cs" />
+    <Compile Include="IMovieService.cs" />
+    <Compile Include="MovieBorrowService.svc.cs">
+      <DependentUpon>MovieBorrowService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="MovieLookupService.svc.cs">
+      <DependentUpon>MovieLookupService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="MovieService.svc.cs">
+      <DependentUpon>MovieService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core_MovieShelf.Data\Core_MovieShelf.Data.csproj">
+      <Project>{3E4CDEDA-1202-4C4C-9686-E52495E0681C}</Project>
+      <Name>Core_MovieShelf.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Domain\Core_MovieShelf.Domain.csproj">
+      <Project>{440F93F6-8CC8-4A37-AF2E-56B55F86689C}</Project>
+      <Name>Core_MovieShelf.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Interface.Data\Core_MovieShelf.Interface.Data.csproj">
+      <Project>{055F45FC-D74B-4563-A732-1B315CA5725A}</Project>
+      <Name>Core_MovieShelf.Interface.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Interface.Domain\Core_MovieShelf.Interface.Domain.csproj">
+      <Project>{5E4A3BF3-6B46-4EAB-9000-D144FEFED924}</Project>
+      <Name>Core_MovieShelf.Interface.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Interface.Process\Core_MovieShelf.Interface.Process.csproj">
+      <Project>{0BB6D375-45A6-44A4-B195-E8CBD6FA10B7}</Project>
+      <Name>Core_MovieShelf.Interface.Process</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Interface\Core_MovieShelf.Interface.Service.csproj">
+      <Project>{CD536E85-F49C-4C58-923F-004709E6C69E}</Project>
+      <Name>Core_MovieShelf.Interface.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Process\Core_MovieShelf.Process.csproj">
+      <Project>{16EACC3F-D5D6-4364-B376-79122BB4C348}</Project>
+      <Name>Core_MovieShelf.Process</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf\Core_MovieShelf.Service.csproj">
+      <Project>{4E783616-C937-4C1A-8482-A8C1CF34C91C}</Project>
+      <Name>Core_MovieShelf.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49205</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <EnableWcfTestClientForSVCDefaultValue>True</EnableWcfTestClientForSVCDefaultValue>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

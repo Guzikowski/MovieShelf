@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e44cd431-31d9-48f5-8db2-824dc0d91719" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49205/MovieLookupService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MovieLookupService.disco" MetadataType="Disco" ID="91f4ba42-7ec4-44f1-b421-890809d9c855" SourceId="1" SourceUrl="http://localhost:49205/MovieLookupService.svc?disco" />
+    <MetadataFile FileName="MovieLookupService.xsd" MetadataType="Schema" ID="f07c172b-5916-4796-baf2-856f8a9971fc" SourceId="1" SourceUrl="http://localhost:49205/MovieLookupService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MovieLookupService.wsdl" MetadataType="Wsdl" ID="3786b272-8b52-4e8a-9e7b-7e629b962a89" SourceId="1" SourceUrl="http://localhost:49205/MovieLookupService.svc?wsdl" />
+    <MetadataFile FileName="MovieLookupService1.xsd" MetadataType="Schema" ID="a6cbeb96-f161-4427-bf5f-5c8b23b3a668" SourceId="1" SourceUrl="http://localhost:49205/MovieLookupService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MovieLookupService2.xsd" MetadataType="Schema" ID="9c55b85c-5cf3-431e-9a6a-b89a227d13d3" SourceId="1" SourceUrl="http://localhost:49205/MovieLookupService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MovieLookupService3.xsd" MetadataType="Schema" ID="9d65eae0-1b87-4e52-807f-37db5157291b" SourceId="1" SourceUrl="http://localhost:49205/MovieLookupService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MovieLookupService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49205/MovieLookupService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49205/MovieLookupService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49205/MovieLookupService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" />
+      <xsd:import schemaLocation="http://localhost:49205/MovieLookupService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMovieLookupService_SaveAllRatingTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllRatingTypes" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveAllRatingTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllRatingTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveAllStatusTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllStatusTypes" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveAllStatusTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllStatusTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveAllViewRatingTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllViewRatingTypes" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveAllViewRatingTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllViewRatingTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_RemoveDisplayImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveDisplayImage" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_RemoveDisplayImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveDisplayImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_RemoveGenreType_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveGenreType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_RemoveGenreType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveGenreTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_RemoveMovieType_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMovieType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_RemoveMovieType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMovieTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_RemoveRatingType_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRatingType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_RemoveRatingType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRatingTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_RemoveStatusType_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveStatusType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_RemoveStatusType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveStatusTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_RemoveViewRatingType_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveViewRatingType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_RemoveViewRatingType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveViewRatingTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_HelloService_InputMessage">
+    <wsdl:part name="parameters" element="tns:HelloService" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_HelloService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HelloServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_CreateDisplayImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDisplayImage" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_CreateDisplayImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDisplayImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_CreateGenreType_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGenreType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_CreateGenreType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGenreTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_CreateMovieType_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovieType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_CreateMovieType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovieTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_CreateRatingType_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRatingType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_CreateRatingType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRatingTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_CreateStatusType_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateStatusType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_CreateStatusType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateStatusTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_CreateViewRatingType_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateViewRatingType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_CreateViewRatingType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateViewRatingTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchDisplayImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchDisplayImage" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchDisplayImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchDisplayImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchGenreType_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchGenreType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchGenreType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchGenreTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchMovieType_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchMovieType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchMovieType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchMovieTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchRatingType_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchRatingType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchRatingType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchRatingTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchStatusType_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchStatusType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchStatusType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchStatusTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchViewRatingType_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchViewRatingType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchViewRatingType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchViewRatingTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchAllDisplayImages_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllDisplayImages" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchAllDisplayImages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllDisplayImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchAllGenreTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllGenreTypes" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchAllGenreTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllGenreTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchAllMovieTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllMovieTypes" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchAllMovieTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllMovieTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchAllRatingTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllRatingTypes" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchAllRatingTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllRatingTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchAllStatusTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllStatusTypes" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchAllStatusTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllStatusTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchAllViewRatingTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllViewRatingTypes" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_FetchAllViewRatingTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllViewRatingTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveDisplayImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDisplayImage" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveDisplayImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDisplayImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveGenreType_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveGenreType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveGenreType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveGenreTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveMovieType_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMovieType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveMovieType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMovieTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveRatingType_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRatingType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveRatingType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRatingTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveStatusType_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveStatusType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveStatusType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveStatusTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveViewRatingType_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveViewRatingType" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveViewRatingType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveViewRatingTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveAllDisplayImages_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllDisplayImages" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveAllDisplayImages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllDisplayImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveAllGenreTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllGenreTypes" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveAllGenreTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllGenreTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveAllMovieTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllMovieTypes" />
+  </wsdl:message>
+  <wsdl:message name="IMovieLookupService_SaveAllMovieTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllMovieTypesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMovieLookupService">
+    <wsdl:operation name="SaveAllRatingTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/SaveAllRatingTypes" message="tns:IMovieLookupService_SaveAllRatingTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/SaveAllRatingTypesResponse" message="tns:IMovieLookupService_SaveAllRatingTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllStatusTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/SaveAllStatusTypes" message="tns:IMovieLookupService_SaveAllStatusTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/SaveAllStatusTypesResponse" message="tns:IMovieLookupService_SaveAllStatusTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllViewRatingTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/SaveAllViewRatingTypes" message="tns:IMovieLookupService_SaveAllViewRatingTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/SaveAllViewRatingTypesResponse" message="tns:IMovieLookupService_SaveAllViewRatingTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveDisplayImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/RemoveDisplayImage" message="tns:IMovieLookupService_RemoveDisplayImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/RemoveDisplayImageResponse" message="tns:IMovieLookupService_RemoveDisplayImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveGenreType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/RemoveGenreType" message="tns:IMovieLookupService_RemoveGenreType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/RemoveGenreTypeResponse" message="tns:IMovieLookupService_RemoveGenreType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMovieType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/RemoveMovieType" message="tns:IMovieLookupService_RemoveMovieType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/RemoveMovieTypeResponse" message="tns:IMovieLookupService_RemoveMovieType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRatingType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/RemoveRatingType" message="tns:IMovieLookupService_RemoveRatingType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/RemoveRatingTypeResponse" message="tns:IMovieLookupService_RemoveRatingType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveStatusType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/RemoveStatusType" message="tns:IMovieLookupService_RemoveStatusType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/RemoveStatusTypeResponse" message="tns:IMovieLookupService_RemoveStatusType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveViewRatingType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/RemoveViewRatingType" message="tns:IMovieLookupService_RemoveViewRatingType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/RemoveViewRatingTypeResponse" message="tns:IMovieLookupService_RemoveViewRatingType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/HelloService" message="tns:IMovieLookupService_HelloService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/HelloServiceResponse" message="tns:IMovieLookupService_HelloService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDisplayImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/CreateDisplayImage" message="tns:IMovieLookupService_CreateDisplayImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/CreateDisplayImageResponse" message="tns:IMovieLookupService_CreateDisplayImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateGenreType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/CreateGenreType" message="tns:IMovieLookupService_CreateGenreType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/CreateGenreTypeResponse" message="tns:IMovieLookupService_CreateGenreType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovieType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/CreateMovieType" message="tns:IMovieLookupService_CreateMovieType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/CreateMovieTypeResponse" message="tns:IMovieLookupService_CreateMovieType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRatingType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/CreateRatingType" message="tns:IMovieLookupService_CreateRatingType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/CreateRatingTypeResponse" message="tns:IMovieLookupService_CreateRatingType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateStatusType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/CreateStatusType" message="tns:IMovieLookupService_CreateStatusType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/CreateStatusTypeResponse" message="tns:IMovieLookupService_CreateStatusType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateViewRatingType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/CreateViewRatingType" message="tns:IMovieLookupService_CreateViewRatingType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/CreateViewRatingTypeResponse" message="tns:IMovieLookupService_CreateViewRatingType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchDisplayImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/FetchDisplayImage" message="tns:IMovieLookupService_FetchDisplayImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/FetchDisplayImageResponse" message="tns:IMovieLookupService_FetchDisplayImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchGenreType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/FetchGenreType" message="tns:IMovieLookupService_FetchGenreType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/FetchGenreTypeResponse" message="tns:IMovieLookupService_FetchGenreType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchMovieType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/FetchMovieType" message="tns:IMovieLookupService_FetchMovieType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/FetchMovieTypeResponse" message="tns:IMovieLookupService_FetchMovieType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchRatingType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/FetchRatingType" message="tns:IMovieLookupService_FetchRatingType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/FetchRatingTypeResponse" message="tns:IMovieLookupService_FetchRatingType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchStatusType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/FetchStatusType" message="tns:IMovieLookupService_FetchStatusType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/FetchStatusTypeResponse" message="tns:IMovieLookupService_FetchStatusType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchViewRatingType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/FetchViewRatingType" message="tns:IMovieLookupService_FetchViewRatingType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/FetchViewRatingTypeResponse" message="tns:IMovieLookupService_FetchViewRatingType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllDisplayImages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/FetchAllDisplayImages" message="tns:IMovieLookupService_FetchAllDisplayImages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/FetchAllDisplayImagesResponse" message="tns:IMovieLookupService_FetchAllDisplayImages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllGenreTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/FetchAllGenreTypes" message="tns:IMovieLookupService_FetchAllGenreTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/FetchAllGenreTypesResponse" message="tns:IMovieLookupService_FetchAllGenreTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllMovieTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/FetchAllMovieTypes" message="tns:IMovieLookupService_FetchAllMovieTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/FetchAllMovieTypesResponse" message="tns:IMovieLookupService_FetchAllMovieTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllRatingTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/FetchAllRatingTypes" message="tns:IMovieLookupService_FetchAllRatingTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/FetchAllRatingTypesResponse" message="tns:IMovieLookupService_FetchAllRatingTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllStatusTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/FetchAllStatusTypes" message="tns:IMovieLookupService_FetchAllStatusTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/FetchAllStatusTypesResponse" message="tns:IMovieLookupService_FetchAllStatusTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllViewRatingTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/FetchAllViewRatingTypes" message="tns:IMovieLookupService_FetchAllViewRatingTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/FetchAllViewRatingTypesResponse" message="tns:IMovieLookupService_FetchAllViewRatingTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDisplayImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/SaveDisplayImage" message="tns:IMovieLookupService_SaveDisplayImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/SaveDisplayImageResponse" message="tns:IMovieLookupService_SaveDisplayImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveGenreType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/SaveGenreType" message="tns:IMovieLookupService_SaveGenreType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/SaveGenreTypeResponse" message="tns:IMovieLookupService_SaveGenreType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMovieType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/SaveMovieType" message="tns:IMovieLookupService_SaveMovieType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/SaveMovieTypeResponse" message="tns:IMovieLookupService_SaveMovieType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRatingType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/SaveRatingType" message="tns:IMovieLookupService_SaveRatingType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/SaveRatingTypeResponse" message="tns:IMovieLookupService_SaveRatingType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveStatusType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/SaveStatusType" message="tns:IMovieLookupService_SaveStatusType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/SaveStatusTypeResponse" message="tns:IMovieLookupService_SaveStatusType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveViewRatingType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/SaveViewRatingType" message="tns:IMovieLookupService_SaveViewRatingType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/SaveViewRatingTypeResponse" message="tns:IMovieLookupService_SaveViewRatingType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllDisplayImages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/SaveAllDisplayImages" message="tns:IMovieLookupService_SaveAllDisplayImages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/SaveAllDisplayImagesResponse" message="tns:IMovieLookupService_SaveAllDisplayImages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllGenreTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/SaveAllGenreTypes" message="tns:IMovieLookupService_SaveAllGenreTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/SaveAllGenreTypesResponse" message="tns:IMovieLookupService_SaveAllGenreTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllMovieTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieLookupService/SaveAllMovieTypes" message="tns:IMovieLookupService_SaveAllMovieTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieLookupService/SaveAllMovieTypesResponse" message="tns:IMovieLookupService_SaveAllMovieTypes_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMovieLookupService" type="tns:IMovieLookupService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveAllRatingTypes">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/SaveAllRatingTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllStatusTypes">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/SaveAllStatusTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllViewRatingTypes">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/SaveAllViewRatingTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveDisplayImage">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/RemoveDisplayImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveGenreType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/RemoveGenreType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMovieType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/RemoveMovieType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRatingType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/RemoveRatingType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveStatusType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/RemoveStatusType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveViewRatingType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/RemoveViewRatingType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloService">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/HelloService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDisplayImage">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/CreateDisplayImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGenreType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/CreateGenreType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovieType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/CreateMovieType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRatingType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/CreateRatingType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateStatusType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/CreateStatusType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateViewRatingType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/CreateViewRatingType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchDisplayImage">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/FetchDisplayImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchGenreType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/FetchGenreType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMovieType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/FetchMovieType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchRatingType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/FetchRatingType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchStatusType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/FetchStatusType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchViewRatingType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/FetchViewRatingType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllDisplayImages">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/FetchAllDisplayImages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllGenreTypes">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/FetchAllGenreTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllMovieTypes">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/FetchAllMovieTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllRatingTypes">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/FetchAllRatingTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllStatusTypes">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/FetchAllStatusTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllViewRatingTypes">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/FetchAllViewRatingTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDisplayImage">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/SaveDisplayImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveGenreType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/SaveGenreType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMovieType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/SaveMovieType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRatingType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/SaveRatingType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveStatusType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/SaveStatusType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveViewRatingType">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/SaveViewRatingType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllDisplayImages">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/SaveAllDisplayImages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllGenreTypes">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/SaveAllGenreTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllMovieTypes">
+      <soap:operation soapAction="http://tempuri.org/IMovieLookupService/SaveAllMovieTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MovieLookupService">
+    <wsdl:port name="BasicHttpBinding_IMovieLookupService" binding="tns:BasicHttpBinding_IMovieLookupService">
+      <soap:address location="http://localhost:49205/MovieLookupService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

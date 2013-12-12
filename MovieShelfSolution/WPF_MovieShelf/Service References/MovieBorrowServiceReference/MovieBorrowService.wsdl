@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MovieBorrowService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49205/MovieBorrowService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49205/MovieBorrowService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49205/MovieBorrowService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" />
+      <xsd:import schemaLocation="http://localhost:49205/MovieBorrowService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMovieBorrowService_HelloService_InputMessage">
+    <wsdl:part name="parameters" element="tns:HelloService" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_HelloService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HelloServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_CreateBorrower_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBorrower" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_CreateBorrower_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBorrowerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_CreateBorrowedItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBorrowedItem" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_CreateBorrowedItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBorrowedItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_FetchBorrower_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchBorrower" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_FetchBorrower_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchBorrowerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_FetchBorrowedItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchBorrowedItem" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_FetchBorrowedItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchBorrowedItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_FetchAllBorrowers_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllBorrowers" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_FetchAllBorrowers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllBorrowersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_FetchAllBorrowedItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllBorrowedItems" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_FetchAllBorrowedItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllBorrowedItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_SaveBorrower_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBorrower" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_SaveBorrower_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBorrowerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_SaveBorrowedItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBorrowedItem" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_SaveBorrowedItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBorrowedItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_SaveAllBorrowers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllBorrowers" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_SaveAllBorrowers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllBorrowersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_SaveAllBorrowedItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllBorrowedItems" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_SaveAllBorrowedItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllBorrowedItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_RemoveBorrower_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveBorrower" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_RemoveBorrower_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveBorrowerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_RemoveBorrowedItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveBorrowedItem" />
+  </wsdl:message>
+  <wsdl:message name="IMovieBorrowService_RemoveBorrowedItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveBorrowedItemResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMovieBorrowService">
+    <wsdl:operation name="HelloService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieBorrowService/HelloService" message="tns:IMovieBorrowService_HelloService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieBorrowService/HelloServiceResponse" message="tns:IMovieBorrowService_HelloService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateBorrower">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieBorrowService/CreateBorrower" message="tns:IMovieBorrowService_CreateBorrower_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieBorrowService/CreateBorrowerResponse" message="tns:IMovieBorrowService_CreateBorrower_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateBorrowedItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieBorrowService/CreateBorrowedItem" message="tns:IMovieBorrowService_CreateBorrowedItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieBorrowService/CreateBorrowedItemResponse" message="tns:IMovieBorrowService_CreateBorrowedItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchBorrower">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieBorrowService/FetchBorrower" message="tns:IMovieBorrowService_FetchBorrower_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieBorrowService/FetchBorrowerResponse" message="tns:IMovieBorrowService_FetchBorrower_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchBorrowedItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieBorrowService/FetchBorrowedItem" message="tns:IMovieBorrowService_FetchBorrowedItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieBorrowService/FetchBorrowedItemResponse" message="tns:IMovieBorrowService_FetchBorrowedItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllBorrowers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieBorrowService/FetchAllBorrowers" message="tns:IMovieBorrowService_FetchAllBorrowers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieBorrowService/FetchAllBorrowersResponse" message="tns:IMovieBorrowService_FetchAllBorrowers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllBorrowedItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieBorrowService/FetchAllBorrowedItems" message="tns:IMovieBorrowService_FetchAllBorrowedItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieBorrowService/FetchAllBorrowedItemsResponse" message="tns:IMovieBorrowService_FetchAllBorrowedItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveBorrower">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieBorrowService/SaveBorrower" message="tns:IMovieBorrowService_SaveBorrower_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieBorrowService/SaveBorrowerResponse" message="tns:IMovieBorrowService_SaveBorrower_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveBorrowedItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieBorrowService/SaveBorrowedItem" message="tns:IMovieBorrowService_SaveBorrowedItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieBorrowService/SaveBorrowedItemResponse" message="tns:IMovieBorrowService_SaveBorrowedItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllBorrowers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieBorrowService/SaveAllBorrowers" message="tns:IMovieBorrowService_SaveAllBorrowers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieBorrowService/SaveAllBorrowersResponse" message="tns:IMovieBorrowService_SaveAllBorrowers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllBorrowedItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieBorrowService/SaveAllBorrowedItems" message="tns:IMovieBorrowService_SaveAllBorrowedItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieBorrowService/SaveAllBorrowedItemsResponse" message="tns:IMovieBorrowService_SaveAllBorrowedItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveBorrower">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieBorrowService/RemoveBorrower" message="tns:IMovieBorrowService_RemoveBorrower_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieBorrowService/RemoveBorrowerResponse" message="tns:IMovieBorrowService_RemoveBorrower_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveBorrowedItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieBorrowService/RemoveBorrowedItem" message="tns:IMovieBorrowService_RemoveBorrowedItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieBorrowService/RemoveBorrowedItemResponse" message="tns:IMovieBorrowService_RemoveBorrowedItem_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMovieBorrowService" type="tns:IMovieBorrowService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloService">
+      <soap:operation soapAction="http://tempuri.org/IMovieBorrowService/HelloService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBorrower">
+      <soap:operation soapAction="http://tempuri.org/IMovieBorrowService/CreateBorrower" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBorrowedItem">
+      <soap:operation soapAction="http://tempuri.org/IMovieBorrowService/CreateBorrowedItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchBorrower">
+      <soap:operation soapAction="http://tempuri.org/IMovieBorrowService/FetchBorrower" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchBorrowedItem">
+      <soap:operation soapAction="http://tempuri.org/IMovieBorrowService/FetchBorrowedItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllBorrowers">
+      <soap:operation soapAction="http://tempuri.org/IMovieBorrowService/FetchAllBorrowers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllBorrowedItems">
+      <soap:operation soapAction="http://tempuri.org/IMovieBorrowService/FetchAllBorrowedItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBorrower">
+      <soap:operation soapAction="http://tempuri.org/IMovieBorrowService/SaveBorrower" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBorrowedItem">
+      <soap:operation soapAction="http://tempuri.org/IMovieBorrowService/SaveBorrowedItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllBorrowers">
+      <soap:operation soapAction="http://tempuri.org/IMovieBorrowService/SaveAllBorrowers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllBorrowedItems">
+      <soap:operation soapAction="http://tempuri.org/IMovieBorrowService/SaveAllBorrowedItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveBorrower">
+      <soap:operation soapAction="http://tempuri.org/IMovieBorrowService/RemoveBorrower" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveBorrowedItem">
+      <soap:operation soapAction="http://tempuri.org/IMovieBorrowService/RemoveBorrowedItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MovieBorrowService">
+    <wsdl:port name="BasicHttpBinding_IMovieBorrowService" binding="tns:BasicHttpBinding_IMovieBorrowService">
+      <soap:address location="http://localhost:49205/MovieBorrowService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

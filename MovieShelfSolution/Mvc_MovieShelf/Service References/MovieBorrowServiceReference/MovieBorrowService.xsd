@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49205/MovieBorrowService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain" />
+  <xs:complexType name="BorrowerContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntityContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BorrowerContract" nillable="true" type="tns:BorrowerContract" />
+  <xs:complexType name="BaseEntityContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDomainContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DisplayImage" nillable="true" type="tns:DisplayImageContract" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BaseEntityContract" nillable="true" type="tns:BaseEntityContract" />
+  <xs:complexType name="BaseDomainContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DomainStatus" nillable="true" type="tns:DomainStatusContract" />
+      <xs:element minOccurs="0" name="HasChanged" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsNew" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRemoved" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Timestamp" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseDomainContract" nillable="true" type="tns:BaseDomainContract" />
+  <xs:complexType name="DomainStatusContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Messages" nillable="true" type="tns:ArrayOfDomainMessageContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainStatusContract" nillable="true" type="tns:DomainStatusContract" />
+  <xs:complexType name="ArrayOfDomainMessageContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DomainMessageContract" nillable="true" type="tns:DomainMessageContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDomainMessageContract" nillable="true" type="tns:ArrayOfDomainMessageContract" />
+  <xs:complexType name="DomainMessageContract">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain" minOccurs="0" name="Id" type="q1:EMessageNumber" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain" minOccurs="0" name="Type" type="q2:EMessageType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainMessageContract" nillable="true" type="tns:DomainMessageContract" />
+  <xs:complexType name="DisplayImageContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDomainContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Path" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DisplayImageContract" nillable="true" type="tns:DisplayImageContract" />
+  <xs:complexType name="BorrowedItemContract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntityContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BorrowedBy" nillable="true" type="xs:anyType" />
+          <xs:element minOccurs="0" name="BorrowedMovie" nillable="true" type="xs:anyType" />
+          <xs:element minOccurs="0" name="DateBorrowed" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateOverdue" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateReturned" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BorrowedItemContract" nillable="true" type="tns:BorrowedItemContract" />
+  <xs:complexType name="DomainListContractOfBorrowerContractZchJDT3W">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="DomainListContractOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BorrowerContract" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DomainStatus" nillable="true" type="tns:DomainStatusContract" />
+      <xs:element minOccurs="0" name="EntityList" nillable="true" type="tns:ArrayOfBorrowerContract" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainListContractOfBorrowerContractZchJDT3W" nillable="true" type="tns:DomainListContractOfBorrowerContractZchJDT3W" />
+  <xs:complexType name="ArrayOfBorrowerContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BorrowerContract" nillable="true" type="tns:BorrowerContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBorrowerContract" nillable="true" type="tns:ArrayOfBorrowerContract" />
+  <xs:complexType name="DomainListContractOfBorrowedItemContractZchJDT3W">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="DomainListContractOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BorrowedItemContract" Namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DomainStatus" nillable="true" type="tns:DomainStatusContract" />
+      <xs:element minOccurs="0" name="EntityList" nillable="true" type="tns:ArrayOfBorrowedItemContract" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainListContractOfBorrowedItemContractZchJDT3W" nillable="true" type="tns:DomainListContractOfBorrowedItemContractZchJDT3W" />
+  <xs:complexType name="ArrayOfBorrowedItemContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BorrowedItemContract" nillable="true" type="tns:BorrowedItemContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBorrowedItemContract" nillable="true" type="tns:ArrayOfBorrowedItemContract" />
+</xs:schema>

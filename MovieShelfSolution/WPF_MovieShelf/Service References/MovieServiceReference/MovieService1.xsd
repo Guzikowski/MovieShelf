@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49205/MovieService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" />
+  <xs:element name="HelloService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="greeting" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HelloServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HelloServiceResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMovieDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="contract" nillable="true" type="q1:MovieDetailContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMovieDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="CreateMovieDetailResult" nillable="true" type="q2:MovieDetailContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMovieSeries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="contract" nillable="true" type="q3:MovieSeriesContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMovieSeriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="CreateMovieSeriesResult" nillable="true" type="q4:MovieSeriesContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchMovieDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="includeDeletion" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchMovieDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="FetchMovieDetailResult" nillable="true" type="q5:MovieDetailContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchMovieSeries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="includeDeletion" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchMovieSeriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="FetchMovieSeriesResult" nillable="true" type="q6:MovieSeriesContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchAllMovieDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="includeDeletion" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchAllMovieDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="FetchAllMovieDetailsResult" nillable="true" type="q7:DomainListContractOfMovieDetailContractZchJDT3W" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchAllMovieSeries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="includeDeletion" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchAllMovieSeriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="FetchAllMovieSeriesResult" nillable="true" type="q8:DomainListContractOfMovieSeriesContractZchJDT3W" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMovieDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="contract" nillable="true" type="q9:MovieDetailContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMovieDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="SaveMovieDetailResult" nillable="true" type="q10:MovieDetailContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMovieSeries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="contract" nillable="true" type="q11:MovieSeriesContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMovieSeriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="SaveMovieSeriesResult" nillable="true" type="q12:MovieSeriesContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAllMovieDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="contract" nillable="true" type="q13:DomainListContractOfMovieDetailContractZchJDT3W" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAllMovieDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="SaveAllMovieDetailsResult" nillable="true" type="q14:DomainListContractOfMovieDetailContractZchJDT3W" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAllMovieSeries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="contract" nillable="true" type="q15:DomainListContractOfMovieSeriesContractZchJDT3W" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAllMovieSeriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="SaveAllMovieSeriesResult" nillable="true" type="q16:DomainListContractOfMovieSeriesContractZchJDT3W" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveMovieDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveMovieDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="RemoveMovieDetailResult" nillable="true" type="q17:DomainStatusContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveMovieSeries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveMovieSeriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" minOccurs="0" name="RemoveMovieSeriesResult" nillable="true" type="q18:DomainStatusContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MovieService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49205/MovieService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49205/MovieService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49205/MovieService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain.Contracts" />
+      <xsd:import schemaLocation="http://localhost:49205/MovieService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Core_MovieShelf.Interface.Domain" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMovieService_HelloService_InputMessage">
+    <wsdl:part name="parameters" element="tns:HelloService" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_HelloService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HelloServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_CreateMovieDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovieDetail" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_CreateMovieDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovieDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_CreateMovieSeries_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovieSeries" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_CreateMovieSeries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMovieSeriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_FetchMovieDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchMovieDetail" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_FetchMovieDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchMovieDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_FetchMovieSeries_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchMovieSeries" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_FetchMovieSeries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchMovieSeriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_FetchAllMovieDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllMovieDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_FetchAllMovieDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllMovieDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_FetchAllMovieSeries_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllMovieSeries" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_FetchAllMovieSeries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllMovieSeriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_SaveMovieDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMovieDetail" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_SaveMovieDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMovieDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_SaveMovieSeries_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMovieSeries" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_SaveMovieSeries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMovieSeriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_SaveAllMovieDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllMovieDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_SaveAllMovieDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllMovieDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_SaveAllMovieSeries_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllMovieSeries" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_SaveAllMovieSeries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAllMovieSeriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_RemoveMovieDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMovieDetail" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_RemoveMovieDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMovieDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_RemoveMovieSeries_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMovieSeries" />
+  </wsdl:message>
+  <wsdl:message name="IMovieService_RemoveMovieSeries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMovieSeriesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMovieService">
+    <wsdl:operation name="HelloService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/HelloService" message="tns:IMovieService_HelloService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/HelloServiceResponse" message="tns:IMovieService_HelloService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovieDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/CreateMovieDetail" message="tns:IMovieService_CreateMovieDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/CreateMovieDetailResponse" message="tns:IMovieService_CreateMovieDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovieSeries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/CreateMovieSeries" message="tns:IMovieService_CreateMovieSeries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/CreateMovieSeriesResponse" message="tns:IMovieService_CreateMovieSeries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchMovieDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/FetchMovieDetail" message="tns:IMovieService_FetchMovieDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/FetchMovieDetailResponse" message="tns:IMovieService_FetchMovieDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchMovieSeries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/FetchMovieSeries" message="tns:IMovieService_FetchMovieSeries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/FetchMovieSeriesResponse" message="tns:IMovieService_FetchMovieSeries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllMovieDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/FetchAllMovieDetails" message="tns:IMovieService_FetchAllMovieDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/FetchAllMovieDetailsResponse" message="tns:IMovieService_FetchAllMovieDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllMovieSeries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/FetchAllMovieSeries" message="tns:IMovieService_FetchAllMovieSeries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/FetchAllMovieSeriesResponse" message="tns:IMovieService_FetchAllMovieSeries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMovieDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/SaveMovieDetail" message="tns:IMovieService_SaveMovieDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/SaveMovieDetailResponse" message="tns:IMovieService_SaveMovieDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMovieSeries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/SaveMovieSeries" message="tns:IMovieService_SaveMovieSeries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/SaveMovieSeriesResponse" message="tns:IMovieService_SaveMovieSeries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllMovieDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/SaveAllMovieDetails" message="tns:IMovieService_SaveAllMovieDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/SaveAllMovieDetailsResponse" message="tns:IMovieService_SaveAllMovieDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllMovieSeries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/SaveAllMovieSeries" message="tns:IMovieService_SaveAllMovieSeries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/SaveAllMovieSeriesResponse" message="tns:IMovieService_SaveAllMovieSeries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMovieDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/RemoveMovieDetail" message="tns:IMovieService_RemoveMovieDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/RemoveMovieDetailResponse" message="tns:IMovieService_RemoveMovieDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMovieSeries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieService/RemoveMovieSeries" message="tns:IMovieService_RemoveMovieSeries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieService/RemoveMovieSeriesResponse" message="tns:IMovieService_RemoveMovieSeries_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMovieService" type="tns:IMovieService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloService">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/HelloService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovieDetail">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/CreateMovieDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMovieSeries">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/CreateMovieSeries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMovieDetail">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/FetchMovieDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMovieSeries">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/FetchMovieSeries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllMovieDetails">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/FetchAllMovieDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllMovieSeries">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/FetchAllMovieSeries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMovieDetail">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/SaveMovieDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMovieSeries">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/SaveMovieSeries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllMovieDetails">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/SaveAllMovieDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAllMovieSeries">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/SaveAllMovieSeries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMovieDetail">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/RemoveMovieDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMovieSeries">
+      <soap:operation soapAction="http://tempuri.org/IMovieService/RemoveMovieSeries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MovieService">
+    <wsdl:port name="BasicHttpBinding_IMovieService" binding="tns:BasicHttpBinding_IMovieService">
+      <soap:address location="http://localhost:49205/MovieService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fa4179de-3085-40f0-b6c9-2b8496f2b6e1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49205/MovieBorrowService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MovieBorrowService.disco" MetadataType="Disco" ID="56343805-8a0d-410f-bfa7-a8b753298af8" SourceId="1" SourceUrl="http://localhost:49205/MovieBorrowService.svc?disco" />
+    <MetadataFile FileName="MovieBorrowService.xsd" MetadataType="Schema" ID="abfdee4f-19ea-405f-99f2-5b4f9045c828" SourceId="1" SourceUrl="http://localhost:49205/MovieBorrowService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MovieBorrowService1.xsd" MetadataType="Schema" ID="2a058a6a-cf4a-4e30-bfa1-3d1e0f037bcb" SourceId="1" SourceUrl="http://localhost:49205/MovieBorrowService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MovieBorrowService2.xsd" MetadataType="Schema" ID="ef4ee9d0-c3c8-437e-a8b3-3786cdcd296a" SourceId="1" SourceUrl="http://localhost:49205/MovieBorrowService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MovieBorrowService3.xsd" MetadataType="Schema" ID="20c78ff4-bd82-4284-87fe-3109db445597" SourceId="1" SourceUrl="http://localhost:49205/MovieBorrowService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MovieBorrowService.wsdl" MetadataType="Wsdl" ID="7986f3d7-d08f-4d88-9e98-0cb03e4435ec" SourceId="1" SourceUrl="http://localhost:49205/MovieBorrowService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5E4A3BF3-6B46-4EAB-9000-D144FEFED924}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core_MovieShelf.Interface.Domain</RootNamespace>
+    <AssemblyName>Core_MovieShelf.Interface.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\Library\Log4Net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contracts\BaseDomainContract.cs" />
+    <Compile Include="Contracts\BaseEntityContract.cs" />
+    <Compile Include="Contracts\BaseLookupContact.cs" />
+    <Compile Include="Contracts\BorrowedItemContract.cs" />
+    <Compile Include="Contracts\BorrowerContract.cs" />
+    <Compile Include="Contracts\DisplayImageContract.cs" />
+    <Compile Include="Contracts\DomainListContract.cs" />
+    <Compile Include="Contracts\DomainMessageContract.cs" />
+    <Compile Include="Contracts\DomainStatus.Contract.cs" />
+    <Compile Include="Contracts\GenreTypeContract.cs" />
+    <Compile Include="Contracts\IBaseDomainContract.cs" />
+    <Compile Include="Contracts\IBaseEntityContract.cs" />
+    <Compile Include="Contracts\IBaseLookupContract.cs" />
+    <Compile Include="Contracts\IBorrowedItemContract.cs" />
+    <Compile Include="Contracts\IBorrowerContract.cs" />
+    <Compile Include="Contracts\IDisplayImageContract.cs" />
+    <Compile Include="Contracts\IDomainListContract.cs" />
+    <Compile Include="Contracts\IDomainMessageContract.cs" />
+    <Compile Include="Contracts\IDomainStatusContract.cs" />
+    <Compile Include="Contracts\IGenreTypeContract.cs" />
+    <Compile Include="Contracts\IMovieDetailContract.cs" />
+    <Compile Include="Contracts\IMovieSeriesContract.cs" />
+    <Compile Include="Contracts\IMovieTypeContract.cs" />
+    <Compile Include="Contracts\IRatingTypeContract.cs" />
+    <Compile Include="Contracts\IStatusTypeContract.cs" />
+    <Compile Include="Contracts\IViewRatingTypeContract.cs" />
+    <Compile Include="Contracts\MovieDetailContract.cs" />
+    <Compile Include="Contracts\MovieSeriesContract.cs" />
+    <Compile Include="Contracts\MovieTypeContract.cs" />
+    <Compile Include="Contracts\RatingTypeContract.cs" />
+    <Compile Include="Contracts\StatusTypeContract.cs" />
+    <Compile Include="Contracts\ViewRatingTypeContract.cs" />
+    <Compile Include="EMessageNumber.cs" />
+    <Compile Include="EMessageType.cs" />
+    <Compile Include="ESeverityLevel.cs" />
+    <Compile Include="IBaseDomain.cs" />
+    <Compile Include="IBaseEntity.cs" />
+    <Compile Include="IBaseLookup.cs" />
+    <Compile Include="IBorrowedItem.cs" />
+    <Compile Include="IBorrower.cs" />
+    <Compile Include="IDisplayImage.cs" />
+    <Compile Include="IDomainList.cs" />
+    <Compile Include="IDomainMessage.cs" />
+    <Compile Include="IGenreType.cs" />
+    <Compile Include="IDomainLogger.cs" />
+    <Compile Include="IMovieDetail.cs" />
+    <Compile Include="IMovieSeries.cs" />
+    <Compile Include="IMovieType.cs" />
+    <Compile Include="IDomainStatus.cs" />
+    <Compile Include="IRatingType.cs" />
+    <Compile Include="IStatusType.cs" />
+    <Compile Include="IViewRatingType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

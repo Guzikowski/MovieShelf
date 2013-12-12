@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5A47CB04-71B1-40D3-AE69-7EC3B3534FBF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WPF_MovieShelf</RootNamespace>
+    <AssemblyName>WPF_MovieShelf</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Service References\MovieBorrowServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MovieLookupServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MovieServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Service References\MovieBorrowServiceReference\MovieBorrowService.wsdl" />
+    <None Include="Service References\MovieBorrowServiceReference\MovieBorrowService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieBorrowServiceReference\MovieBorrowService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieBorrowServiceReference\MovieBorrowService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieBorrowServiceReference\MovieBorrowService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieBorrowServiceReference\WPF_MovieShelf.MovieBorrowServiceReference.BorrowedItemContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieBorrowServiceReference\WPF_MovieShelf.MovieBorrowServiceReference.BorrowerContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieBorrowServiceReference\WPF_MovieShelf.MovieBorrowServiceReference.DomainListContractOfBorrowedItemContractZchJDT3W.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieBorrowServiceReference\WPF_MovieShelf.MovieBorrowServiceReference.DomainListContractOfBorrowerContractZchJDT3W.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieBorrowServiceReference\WPF_MovieShelf.MovieBorrowServiceReference.DomainStatusContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\MovieLookupService.wsdl" />
+    <None Include="Service References\MovieLookupServiceReference\MovieLookupService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\MovieLookupService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\MovieLookupService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\MovieLookupService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\WPF_MovieShelf.MovieLookupServiceReference.DisplayImageContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\WPF_MovieShelf.MovieLookupServiceReference.DomainListContractOfDisplayImageContractZchJDT3W.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\WPF_MovieShelf.MovieLookupServiceReference.DomainListContractOfGenreTypeContractZchJDT3W.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\WPF_MovieShelf.MovieLookupServiceReference.DomainListContractOfMovieTypeContractZchJDT3W.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\WPF_MovieShelf.MovieLookupServiceReference.DomainListContractOfRatingTypeContractZchJDT3W.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\WPF_MovieShelf.MovieLookupServiceReference.DomainListContractOfStatusTypeContractZchJDT3W.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\WPF_MovieShelf.MovieLookupServiceReference.DomainListContractOfViewRatingTypeContractZchJDT3W.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\WPF_MovieShelf.MovieLookupServiceReference.DomainStatusContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\WPF_MovieShelf.MovieLookupServiceReference.GenreTypeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\WPF_MovieShelf.MovieLookupServiceReference.MovieTypeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\WPF_MovieShelf.MovieLookupServiceReference.RatingTypeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\WPF_MovieShelf.MovieLookupServiceReference.StatusTypeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieLookupServiceReference\WPF_MovieShelf.MovieLookupServiceReference.ViewRatingTypeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieServiceReference\MovieService.wsdl" />
+    <None Include="Service References\MovieServiceReference\MovieService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieServiceReference\MovieService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieServiceReference\MovieService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieServiceReference\MovieService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MovieServiceReference\WPF_MovieShelf.MovieServiceReference.DomainListContractOfMovieDetailContractZchJDT3W.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieServiceReference\WPF_MovieShelf.MovieServiceReference.DomainListContractOfMovieSeriesContractZchJDT3W.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieServiceReference\WPF_MovieShelf.MovieServiceReference.DomainStatusContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieServiceReference\WPF_MovieShelf.MovieServiceReference.MovieDetailContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MovieServiceReference\WPF_MovieShelf.MovieServiceReference.MovieSeriesContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MovieBorrowServiceReference\" />
+    <WCFMetadataStorage Include="Service References\MovieLookupServiceReference\" />
+    <WCFMetadataStorage Include="Service References\MovieServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieBorrowServiceReference\MovieBorrowService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieBorrowServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieBorrowServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieBorrowServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieLookupServiceReference\MovieLookupService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieLookupServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieLookupServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieLookupServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieServiceReference\MovieService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MovieServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

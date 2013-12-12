@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E783616-C937-4C1A-8482-A8C1CF34C91C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core_MovieShelf.Service</RootNamespace>
+    <AssemblyName>Core_MovieShelf.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseEntityService.cs" />
+    <Compile Include="BaseLookupService.cs" />
+    <Compile Include="BaseService.cs" />
+    <Compile Include="BorrowedItemService.cs" />
+    <Compile Include="BorrowerService.cs" />
+    <Compile Include="DisplayImageService.cs" />
+    <Compile Include="GenreTypeService.cs" />
+    <Compile Include="MovieDetailService.cs" />
+    <Compile Include="MovieSeriesService.cs" />
+    <Compile Include="MovieTypeService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatingTypeService.cs" />
+    <Compile Include="StatusTypeService.cs" />
+    <Compile Include="ViewRatingTypeService.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Core_MovieShelf.Domain\Core_MovieShelf.Domain.csproj">
+      <Project>{440F93F6-8CC8-4A37-AF2E-56B55F86689C}</Project>
+      <Name>Core_MovieShelf.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Interface.Data\Core_MovieShelf.Interface.Data.csproj">
+      <Project>{055F45FC-D74B-4563-A732-1B315CA5725A}</Project>
+      <Name>Core_MovieShelf.Interface.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Interface.Domain\Core_MovieShelf.Interface.Domain.csproj">
+      <Project>{5E4A3BF3-6B46-4EAB-9000-D144FEFED924}</Project>
+      <Name>Core_MovieShelf.Interface.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Interface.Process\Core_MovieShelf.Interface.Process.csproj">
+      <Project>{0BB6D375-45A6-44A4-B195-E8CBD6FA10B7}</Project>
+      <Name>Core_MovieShelf.Interface.Process</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Interface\Core_MovieShelf.Interface.Service.csproj">
+      <Project>{CD536E85-F49C-4C58-923F-004709E6C69E}</Project>
+      <Name>Core_MovieShelf.Interface.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core_MovieShelf.Process\Core_MovieShelf.Process.csproj">
+      <Project>{16EACC3F-D5D6-4364-B376-79122BB4C348}</Project>
+      <Name>Core_MovieShelf.Process</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

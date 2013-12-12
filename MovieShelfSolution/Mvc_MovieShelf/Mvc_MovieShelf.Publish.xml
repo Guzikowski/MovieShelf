@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="http://localhost/Mvc_MovieShelf" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="Default Web Site/MovieShelf" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="False" msdeployMarkAsApp="True" profileName="Profile1" publishMethod="MSDeploy" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True" />
+</publishData>
