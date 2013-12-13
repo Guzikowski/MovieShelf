@@ -5,8 +5,11 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
     <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
-    <PostConversionRemoveFromScc>;d:\wlgtfs1v\Intergen - Training\Trunk - Mainline\MovieShelf\DB_MovieShelf\DB_MovieShelf.csproj</PostConversionRemoveFromScc>
-    <PostConversionAddToScc>;d:\wlgtfs1v\Intergen - Training\Trunk - Mainline\MovieShelf\DB_MovieShelf\DB_MovieShelf.sqlproj</PostConversionAddToScc>
+    <PostConversionRemoveFromScc>
+    </PostConversionRemoveFromScc>
+    <PostConversionAddToScc>
+    </PostConversionAddToScc>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -20,21 +23,17 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ConnectionString>
     </ConnectionString>
-    <SccProjectName>
-    </SccProjectName>
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccAuxPath>
-    </SccAuxPath>
-    <SccProvider>
-    </SccProvider>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
     <FileUpgradeFlags>40</FileUpgradeFlags>
-    <UpgradeBackupLocation>d:\wlgtfs1v\Intergen - Training\Trunk - Mainline\MovieShelf\Backup1\DB_MovieShelf\</UpgradeBackupLocation>
+    <UpgradeBackupLocation>D:\PlayArea\GitHub\MovieShelf\MovieShelfSolution\Backup\DB_MovieShelf\</UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
     <Name>DB_MovieShelf</Name>
     <ProjectVersion>4.0</ProjectVersion>
-    <ProjectGuid>{766170a0-76aa-4bda-af62-0a5dffdf0f53}</ProjectGuid>
+    <ProjectGuid>{f6512d03-d2bf-456f-83ff-94abca8bae01}</ProjectGuid>
     <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
     <GenerateDatabaseFile>False</GenerateDatabaseFile>
     <GenerateCreateScript>False</GenerateCreateScript>
@@ -98,6 +97,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="StoredProcedure\" />
+    <Folder Include="Properties\" />
+    <Folder Include="Table\" />
+    <Folder Include="Test Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="PreDeployScript.sql" />
